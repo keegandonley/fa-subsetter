@@ -1,0 +1,14 @@
+# This is an example subset file that will be generated
+projectName: my-subset
+version: 6.1.2
+icons:
+  - phone:
+      - regular
+  - envelope:
+      - regular
+  - pen-nib:
+      - regular
+  - calendar-days:
+      - regular
+  - paperclip:
+      - regular
