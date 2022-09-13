@@ -1,2 +1,3 @@
-/out/my-subset.yml
+/out/*.yml
+/out/*.json
 .DS_Store

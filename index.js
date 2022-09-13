@@ -9,6 +9,13 @@ const filterByFamily = (item) => {
 
 const mapIcon = ({ name }) => name;
 
+const prefixes = {
+  regular: "far",
+  solid: "fas",
+  brand: "fab",
+  light: "fal",
+};
+
 const icons = Array.from(
   new Set(
     config.categories
@@ -38,3 +45,19 @@ ${icons
 fs.writeFileSync(outFile, result);
 
 console.log("config was written to", outFile);
+
+const outJson = path.join(__dirname, "out", `${config.projectName}.json`);
+const result2 = JSON.stringify(
+  icons.map((icon) => {
+    return {
+      name: icon,
+      prefix: prefixes[config.weight],
+    };
+  }),
+  null,
+  2
+);
+
+fs.writeFileSync(outJson, result2);
+
+console.log("JSON was written to", outJson);
