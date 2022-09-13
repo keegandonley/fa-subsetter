@@ -51,7 +51,10 @@ const result2 = JSON.stringify(
   icons.map((icon) => {
     return {
       name: icon,
-      prefix: prefixes[config.weight],
+      prefix: `fa-${config.weight}`,
+      weight: prefixes[config.weight],
+      icon: `fa-${icon}`,
+      className: `fa-${config.weight} fa-${icon}`,
     };
   }),
   null,
